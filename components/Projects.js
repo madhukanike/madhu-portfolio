@@ -1,7 +1,9 @@
 'use client'
 import {
   ExternalLink, Github, Terminal, MessageSquare, ShoppingCart,
-  TrendingDown, FileSearch, Hash, ShieldCheck
+  TrendingDown, FileSearch, Hash, ShieldCheck,
+  TerminalIcon,
+  Brain
 } from 'lucide-react'
 
 export default function Projects() {
@@ -29,24 +31,24 @@ export default function Projects() {
     },
     {
       id: "SYS-LOG_002",
-      title: "SHOPSPHERE E-COMMERCE",
-      icon: <ShoppingCart size={16} />,
-      tags: ["MERN", "Socket.io", "JWT"],
+      title: "CAREERPILOT AI",
+      icon: <Brain size={16} />,
+      tags: ["Python", "FastAPI", "React", "Groq LLaMA 3.3 70B"],
       theme: "purple",
       status: "STABLE",
       points: [
         {
           label: "ARCHITECTURE",
-          content: "Full MERN stack e-commerce platform with JWT authentication, MongoDB transactions, and a React front end, built as a full-stack portfolio piece alongside the AI/ML projects."
+          content: "Built a full- stack AI career assistant using FastAPI, React, Groq LLaMA, and Python to analyze resumes, match candidates with job descriptions, and generate personalized interview questions.."
         },
         {
           label: "OPERATIONAL_IMPACT",
-          content: "Real-time order updates via Socket.io and an admin analytics dashboard for tracking sales and inventory."
+          content: "Automates resume analysis, job matching, and interview preparation through an interactive web application, helping candidates identify skill gaps and improve their job readiness."
         }
       ],
-      metrics: ["Real-Time Orders", "JWT Auth", "Admin Dashboard", "MongoDB"],
-      github: "https://github.com/madhukanike",
-      demo: null
+      metrics: ["Resume Analysis", "JD Matching", "AI Interview", "Live Deploy"],
+      github: "https://github.com/madhukanike/careerpilot-ai",
+      demo: "https://carrerpilot-ai-1-459n.onrender.com"
     },
     {
       id: "SYS-LOG_003",
@@ -66,7 +68,7 @@ export default function Projects() {
         }
       ],
       metrics: ["89% F1-Score", "50K+ Records", "SMOTE", "Scikit-learn"],
-      github: "https://github.com/madhukanike",
+      github: "https://github.com/madhukanike/customer-churn-prediction",
       demo: null
     },
     {
@@ -87,7 +89,7 @@ export default function Projects() {
         }
       ],
       metrics: ["TF-IDF", "Entity Extraction", "JD Matching", "NLP Pipeline"],
-      github: "https://github.com/madhukanike",
+      github: "https://github.com/madhukanike/Resume-Screening-using-Automation-Tppls-using-NlP-Techniqeso",
       demo: null
     }
   ]
@@ -209,25 +211,25 @@ export default function Projects() {
                       </div>
 
                       <div className="pt-8 border-t border-slate-900 transition-colors duration-500 group-hover:border-slate-700">
-                         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-                           {project.metrics.map((m, i) => (
-                             <div key={i} className={`flex flex-col p-3 bg-black/60 border ${t.border} rounded-xl transition-all duration-500 group-hover:bg-black/80 group-hover:border-opacity-70`}>
-                               <span className="text-[8px] text-slate-600 font-bold uppercase mb-1">Tag_0{i}</span>
-                               <span className={`text-[11px] font-black ${t.text} whitespace-nowrap transition-all duration-500 group-hover:brightness-125`}>{m}</span>
-                             </div>
-                           ))}
-                         </div>
+                        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+                          {project.metrics.map((m, i) => (
+                            <div key={i} className={`flex flex-col p-3 bg-black/60 border ${t.border} rounded-xl transition-all duration-500 group-hover:bg-black/80 group-hover:border-opacity-70`}>
+                              <span className="text-[8px] text-slate-600 font-bold uppercase mb-1">Tag_0{i}</span>
+                              <span className={`text-[11px] font-black ${t.text} whitespace-nowrap transition-all duration-500 group-hover:brightness-125`}>{m}</span>
+                            </div>
+                          ))}
+                        </div>
 
-                         <div className="flex gap-4">
-                           <a href={project.github} target="_blank" rel="noopener noreferrer" className={`p-4 border ${t.border} bg-white/5 hover:bg-white/10 transition-all rounded-xl group/btn`}>
-                             <Github size={20} className={`${t.text} group-hover/btn:scale-110 transition-transform`} />
-                           </a>
-                           {project.demo && (
-                             <a href={project.demo} target="_blank" rel="noopener noreferrer" className={`flex-1 px-6 py-4 border ${t.border} bg-white/5 hover:bg-white/10 transition-all rounded-xl text-[11px] font-black flex items-center justify-center gap-3 ${t.text} tracking-[0.2em] group-hover:bg-white/20`}>
-                               <ExternalLink size={18} /> VIEW_LIVE_DEMO
-                             </a>
-                           )}
-                         </div>
+                        <div className="flex gap-4">
+                          <a href={project.github} target="_blank" rel="noopener noreferrer" className={`p-4 border ${t.border} bg-white/5 hover:bg-white/10 transition-all rounded-xl group/btn`}>
+                            <Github size={20} className={`${t.text} group-hover/btn:scale-110 transition-transform`} />
+                          </a>
+                          {project.demo && (
+                            <a href={project.demo} target="_blank" rel="noopener noreferrer" className={`flex-1 px-6 py-4 border ${t.border} bg-white/5 hover:bg-white/10 transition-all rounded-xl text-[11px] font-black flex items-center justify-center gap-3 ${t.text} tracking-[0.2em] group-hover:bg-white/20`}>
+                              <ExternalLink size={18} /> VIEW_LIVE_DEMO
+                            </a>
+                          )}
+                        </div>
                       </div>
                     </div>
                   </div>
