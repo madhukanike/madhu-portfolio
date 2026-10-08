@@ -35,7 +35,7 @@ export default function Projects() {
       icon: <Brain size={16} />,
       tags: ["Python", "FastAPI", "React", "Groq LLaMA 3.3 70B"],
       theme: "purple",
-      status: "STABLE",
+      status: "LIVE",
       points: [
         {
           label: "ARCHITECTURE",
@@ -69,7 +69,7 @@ export default function Projects() {
       ],
       metrics: ["89% F1-Score", "50K+ Records", "SMOTE", "Scikit-learn"],
       github: "https://github.com/madhukanike/customer-churn-prediction",
-      demo: null
+      demo: "https://customer-churn-prediction-swfsingrvtlxtin4pk8wcj.streamlit.app/"
     },
     {
       id: "SYS-LOG_004",
